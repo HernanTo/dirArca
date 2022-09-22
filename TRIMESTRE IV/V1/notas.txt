@@ -1,0 +1,19 @@
+Buenos días uwu
+
+Principalmente, el grupo está compuesto por los siguientes aprendices:
+
+- Hernán Torres.
+- María Tovar.
+- Santiago Ocampo.
+- Saraluz Castillo.
+- Sofia Alandete.
+
+Entonces, para dar inicio a la contextualización, hablaremos sobre qué es la fundación Arcángeles:
+
+-- Es una fundación que se enfoca en la rehabilitación integral de personas con discapacidad. Actualmente, provee servicios como atención y 
+gestión de citas médicas de sus pacientes, por medio de, sus instalaciones físicas.
+
+Teniendo en cuenta lo mencionado, identificamos la problemática que posee la fundación con respecto a la atención de sus pacientes, dado que, 
+solo dispone de un espacio físico para realizar dicho servicio.
+Por esta razón, se genera la necesidad de construir un sistema de información que optimize la gestión de citas médicas de la fundación Arcángeles.
+

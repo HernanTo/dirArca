@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #F4F6F7;
+    background:#17202A;
+
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #483D8B;
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+    background: #473d8b17;
+}
+::-webkit-scrollbar-thumb{
+    background: #483D8B;
+    border-radius: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 60vw;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.header-container{
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.header-container h1{
+    font-family: 'Poppins';
+    color: white;
+}
+
+.trim{
+    font-family: 'Nunito';
+    font-weight: bolder;
+    color: white;
+    font-size: 14px;
+}
+.clm{
+    font-family: 'Nunito';
+    text-align: center;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: white;
+}
+.clm-name{
+    font-style: italic;
+    font-weight: bold;
+}
+.items-trim{
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+    grid-auto-rows: 50px;
+    /* border: 3px solid black; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4px;
+    margin-bottom: 4px;
+}
+
+.items-trim:nth-child(2){
+    color: white;
+    font-family: 'Poppins';
+}
+.clm-head{
+    background: #483D8B;
+}
+.clm a{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    transition: all 0.6;
+}
+.clm a img{
+    width: 20px;
+}
+a:hover{
+    transform: scale(1.2);
+}
