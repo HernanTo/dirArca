@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-09-2022 a las 03:31:11
+-- Tiempo de generación: 23-09-2022 a las 05:07:48
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `citasmedicas` (
   `id_cita` int(11) NOT NULL,
+  `id_tipo_cita` int(11) NOT NULL,
   `fecha` date NOT NULL,
   `hora` time NOT NULL,
   `estadoCita` tinyint(4) NOT NULL,
@@ -43,10 +44,10 @@ CREATE TABLE `citasmedicas` (
 -- Volcado de datos para la tabla `citasmedicas`
 --
 
-INSERT INTO `citasmedicas` (`id_cita`, `fecha`, `hora`, `estadoCita`, `consultorio`, `tddDoctor`, `docDoctor`, `tddPaciente`, `docPaciente`) VALUES
-(1, '2022-08-13', '15:00:00', 0, 903, '', '721827383', '', NULL),
-(2, '2022-08-13', '14:00:00', 1, 903, '', '721827383', '', '1203827182'),
-(7, '2022-08-19', '20:00:00', 1, 782, '', '1018726753', ' ', ' ');
+INSERT INTO `citasmedicas` (`id_cita`, `id_tipo_cita`, `fecha`, `hora`, `estadoCita`, `consultorio`, `tddDoctor`, `docDoctor`, `tddPaciente`, `docPaciente`) VALUES
+(1, 0, '2022-08-13', '15:00:00', 0, 903, '', '721827383', '', NULL),
+(2, 1, '2022-08-13', '14:00:00', 1, 903, '', '721827383', '', '1203827182'),
+(7, 2, '2022-08-19', '20:00:00', 1, 782, '', '1018726753', ' ', ' ');
 
 -- --------------------------------------------------------
 
@@ -252,6 +253,7 @@ INSERT INTO `usuario` (`fk_pk_tipo_documentoU`, `documento_U`, `estado_U`, `pNom
 ('CE', '1018726753', 1, 'Flor', '', 'Amaya', 'Arevalo', '1995-05-07', 'Cra 97c #47C - 78', 'arevalo45@arca.com', 3027685642, NULL, '1', '$2y$10$/j/28qjNGeKMO3jtqnAnm.6HNQgTYAeowcYLPDeUXWAr.8vEDysgC', NULL, NULL, 'assets/img/profileImages/0.png'),
 ('CC', '1019877654', 1, 'Jorge', '', 'Villa', 'Sanchez', '1993-10-09', 'Calle 10A #20-19', 'villa4032@arca.com', 3056786452, NULL, '1', '$2y$10$7HazEqANZ9bNUnsVfmdFkO7bMuBk0rQx0Gxb0l0q5xyZJtBeLJAKe', NULL, NULL, 'assets/img/profileImages/0.png'),
 ('CC', '102128331', 1, 'Santiago', '', 'Flores', 'Gomez', '1970-04-27', 'Calle 43 No. 27-12', 'flores3261@arca.com', 3145439850, NULL, '4', '$2y$10$g1iRUS5DBRfdT7wuTOsPaukj2C2UmZpSYefQaau1annF6SdsEe5Vm', NULL, NULL, 'assets/img/profileImages/0.png'),
+('TI', '1022330332', 1, 'Hernán', '', 'Torres', 'Rodríguez', '2005-03-17', 'Kra 90B #49A-56 SUR', 'hetoro1703@gmail.com', 3132093326, NULL, '0', '$2y$10$GksB9gMv0SRqB1gbPfkfU.zUWGtJOnMEOovLR2Zufvj1TR3XiwE4y', 0, 'NULL', 'assets/img/profileImages/0.png'),
 ('TI', '1023937291', 1, 'Alejandra', 'Maria', 'Vargas', 'Torres', '2006-12-20', 'Av. Ciudad de Cali No. 6C-09', 'maleja67@gmail.com', 3058765432, 'Sura', '0', '$2y$10$EQGXqLDXoB3lBoD1aRs9Suc0kCPC29dJC/8lz/AS71NK2cWpBdPcG', 1, 'Titan', 'assets/img/profileImages/0.png'),
 ('CC', '1040340344', 1, 'Martha', 'Cecilia', 'Fonseca', 'Acevedo', '2005-05-20', 'Av. Ciudad de Cali No. 9C-76', 'acevado@arca.com', 3145439851, NULL, '0', '$2y$10$W2r.jkPzRQgjpfeMUy7RCOeTNufvmNKCY/ZbdmSe69wpKtyOxPDoa', NULL, NULL, 'assets/img/profileImages/0.png'),
 ('CC', '1049204933', 1, 'Carlos', 'Manuel', 'Soler', 'Rosas', '1985-10-10', 'Calle 90B sur #13-27', 'soler52@arca.com', 3132095640, NULL, '0', '$2y$10$JOQU5kT0Kd7Ww3JnawCw5OH6Lu53cZtsO17o10vmmc/gnfiQB7bwq', NULL, NULL, 'assets/img/profileImages/0.png'),
@@ -300,6 +302,7 @@ INSERT INTO `usuario_has_roles` (`usuario_tdoc`, `usuario_id`, `usuario_rol`) VA
 ('CE', 281379387, 4),
 ('CE', 748323632, 4),
 ('CE', 1018726753, 3),
+('TI', 1022330332, 4),
 ('TI', 1023937291, 4),
 ('TI', 1203827182, 4);
 
