@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Entregables</h2>
+    <form action="./pres_entregable_store.php" method="post">
+        <input type="text" name="entregable" id="name-entregable" placeholder="Nombre entregable">
+        <select name="trim" id="trim">
+            <option value="6">Trimestre 6</option>
+            <option value="5">Trimestre 5</option>
+            <option value="4">Trimestre 4</option>
+            <option value="3">Trimestre 3</option>
+            <option value="2">Trimestre 2</option>
+            <option value="1">Trimestre 1</option>
+        </select>
+        <input type="submit" value="enviar">
+    </form>
+    <h2>File</h2>
+    <form action="./pres_file_store.php" method="post" enctype="multipart/form-data">
+        <input type="text" name="name-file" id="" placeholder="Nombre entregable">
+        <select name="trim" id="trim">
+            <option value="5">Trimestre 5</option>
+            <option value="4" hidden>Trimestre 4</option>
+            <option value="3" hidden>Trimestre 3</option>
+            <option value="6">Trimestre 6</option>
+            <option value="2" hidden>Trimestre 2</option>
+            <option value="1" hidden>Trimestre 1</option>
+        </select>
+        <input type="file" name="file" id="">
+        <input type="url" name="cloud" id="" placeholder="cloud">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
